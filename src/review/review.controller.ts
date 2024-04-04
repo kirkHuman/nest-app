@@ -5,15 +5,15 @@ import { ReviewModel } from './review.model/review.model';
 export class ReviewController {
   @Post('create')
   async create(@Body() dto: Omit<ReviewModel, '_id'>) {
-	return 'create';
+    return 'create';
   }
 
   @Delete(':id')
   async delete(@Param('id') id: string) {
-	return 'delete';
+    return 'delete';
   }
   @Get('byProduct/:productId')
   async getByProduct(@Param('productId') productId: string) {
-	return 'get';
+    return 'get';
   }
 }
